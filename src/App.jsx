@@ -13,13 +13,27 @@ import Espelhos from './pages/Work/Espelhos'
 import Privacy from './pages/PrivacyPolicy/privacy'
 import Redes from './components/Redes'
 
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 import './sass/index.scss'
 import './sass/style.scss'
 
 function App() {
+  function ScrollToTop() {
+    const { pathname } = useLocation();
+  
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+  
+    return null;
+  }
+
   return (
     <>
       <Router>
+        <ScrollToTop/>
         <Routes>
           <Route exact path='/' element = {<Home/>}/>
 

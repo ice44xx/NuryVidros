@@ -6,7 +6,7 @@ const NavbarWorks = () => {
     <div>
         <nav className='NavbarWork'>
         <Link to = '/'>
-          <img src="../../../public/img/logo/arrow-left.png" alt="flecha pra voltar a home" className='arrow-left' /> Voltar
+          <img src="/img/logo/arrow-left.png" alt="flecha pra voltar a home" className='arrow-left' /> Voltar
         </Link>
         </nav>
     </div>

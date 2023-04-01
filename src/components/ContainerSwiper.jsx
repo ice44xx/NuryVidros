@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Navigation} from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Link } from 'react-router-dom'
@@ -7,43 +7,36 @@ import 'swiper/scss/controller'
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 
-const ContainerSwiper = () => {
+ 
+const breakpoints = {
+  0:{
+    slidesPerView: 1,
+  },
+  450: {
+    slidesPerView: 1,
+  },
+  750: {
+    slidesPerView: 2,
+  },
+  1180: {
+    slidesPerView: 3,
+  },
+  1380: {
+    slidesPerView: 4,
+  }
+};
 
-  const [slidesPerView, setSlidesPerView] = useState(
-    parseInt(localStorage.getItem("slidesPerView")) || 4
-  );
-  useEffect(() => {
-      function handleResize() {
-        if (window.innerWidth <= 720) {
-          setSlidesPerView(1);
-        } else if (window.innerWidth <= 1120) {
-          setSlidesPerView(2);
-        } else if (window.innerWidth <= 1600) {
-          setSlidesPerView(3);
-        } else {
-          setSlidesPerView(4);
-        }
-      }
-      window.addEventListener('resize', handleResize);
-
-      return () => window.removeEventListener('resize', handleResize);
-  }, []);  
-
-  useEffect(() => {
-    localStorage.setItem("slidesPerView", slidesPerView.toString());
-  }, [slidesPerView]);
-
+const ContainerSwiper = () => { 
   return (
     <>
       <div className="container-swiper">
         <Swiper
             modules={[Navigation]}
             spaceBetween={0}
-            slidesPerView={slidesPerView}
+            slidesPerView={4}
+            breakpoints={breakpoints}
             navigation
             wrapperTag = "div" className="mySwiper"
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
           >
             <SwiperSlide>
               <div className="slide-box">

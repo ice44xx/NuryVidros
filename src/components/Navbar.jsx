@@ -30,6 +30,9 @@ const Navbar = () => {
     <nav id = 'navbar' onScroll = {handleScroll}>
       <div className="container-desktop">
         <ul>
+          <div className="icon">
+            <img src="/img/logo/logo-icon.png" alt="Logo icone Nury Vidros" />
+          </div>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">Empresa</a></li>
           <li><a href="#service">Serviços</a></li>

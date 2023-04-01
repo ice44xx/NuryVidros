@@ -1,19 +1,6 @@
-import React from 'react'
-import { useState } from "react";
-import FSLightbox from 'fslightbox-react';
+import React from "react";
 
 const Box = () => {
-  const [lightboxController, setLightboxController] = useState({
-    toggler: false,
-    slide: 1
-  });
-
-  const handleToggleLightbox = (slide) => {
-    setLightboxController({
-      toggler: !lightboxController.toggler,
-      slide: slide
-    });
-  };
 
   return (
     <>
@@ -24,53 +11,38 @@ const Box = () => {
       </div>
       <div className="container-content-pics">
 
-        <div className="item w-2 h-2" onClick={() => handleToggleLightbox(1)}>
+        <div className="item w-2 h-2" >
           <div className="b-g"></div>
-          <img src = '../../../public/img/trab/box/1.jpg' alt="Box de Vidro" className='img-gallery' />
+          <img src = '/img/trab/box/1.jpg' alt="Box de Vidro" className='img-gallery' />
         </div>
 
-        <div className="item w-2 h-1" onClick={() => handleToggleLightbox(2)}>
-          <img src = '../../../public/img/trab/box/2.jpg' alt="Box de Vidro" className='img-gallery' />
+        <div className="item w-2 h-1" >
+          <img src = '/img/trab/box/2.jpg' alt="Box de Vidro" className='img-gallery' />
         </div>
 
-        <div className="item w-1 h-2" onClick={() => handleToggleLightbox(3)}>
-          <img src = '../../../public/img/trab/box/3.jpg' alt="Box de Vidro" className='img-gallery' />
+        <div className="item w-1 h-2" >
+          <img src = '/img/trab/box/3.jpg' alt="Box de Vidro" className='img-gallery' />
         </div>
         
-        <div className="item w-1 h-1" onClick={() => handleToggleLightbox(4)}>
-          <img src = '../../../public/img/trab/box/4.jpg' alt="Box de Vidro" className='img-gallery' />
+        <div className="item w-1 h-1" >
+          <img src = '/img/trab/box/4.jpg' alt="Box de Vidro" className='img-gallery' />
         </div>
 
-        <div className="item w-2 h-2" onClick={() => handleToggleLightbox(5)}>
-          <img src = '../../../public/img/trab/box/5.jpg' alt="Box de Vidro" className='img-gallery' />
+        <div className="item w-2 h-2" >
+          <img src = '/img/trab/box/5.jpg' alt="Box de Vidro" className='img-gallery' />
         </div>
 
-        <div className="item w-1-h-2" onClick={() => handleToggleLightbox(6)}>
-          <img src = '../../../public/img/trab/box/6.jpg' alt="Box de Vidro" className='img-gallery' />
+        <div className="item w-1-h-2" >
+          <img src = '/img/trab/box/6.jpg' alt="Box de Vidro" className='img-gallery' />
         </div>
 
-        <div className="item w-2 h-1" onClick={() => handleToggleLightbox(7)}>
-          <img src = '../../../public/img/trab/box/7.jpg' alt="Box de Vidro" className='img-gallery' />
+        <div className="item w-2 h-1" >
+          <img src = '/img/trab/box/7.jpg' alt="Box de Vidro" className='img-gallery' />
         </div>
 
-        <div className="item w-2 h-1" onClick={() => handleToggleLightbox(8)}>
-          <img src = '../../../public/img/trab/box/8.jpg' alt="Box de Vidro" className='img-gallery' />
+        <div className="item w-2 h-1" >
+          <img src = '/img/trab/box/8.jpg' alt="Box de Vidro" className='img-gallery' />
         </div>
-        <FSLightbox
-            toggler={lightboxController.toggler}
-            sources={[
-              "../../../public/img/trab/box/1.jpg",
-              "../../../public/img/trab/box/2.jpg",
-              "../../../public/img/trab/box/3.jpg",
-              "../../../public/img/trab/box/4.jpg",
-              "../../../public/img/trab/box/5.jpg",
-              "../../../public/img/trab/box/6.jpg",
-              "../../../public/img/trab/box/7.jpg",
-              "../../../public/img/trab/box/8.jpg",
-            ]}
-            slide={lightboxController.slide}
-            onClose={() => handleToggleLightbox(1)}
-          />
       </div>
     </div>
   </>
