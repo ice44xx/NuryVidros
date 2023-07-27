@@ -23,6 +23,11 @@
         img{
             display: block;
             width: 80px;
+            transition: all 0.3s;
+            &:hover{
+                transform: scale(95%);
+                transition: all 0.3s;
+            }
         }
         .neon {
             position: absolute;
@@ -77,10 +82,11 @@
                 color: white;
                 text-decoration: none;
             }
-        }
-        button:hover{
-            border: 2px solid $primary-color;
-            transition: all 0.4s;
+            &:hover{
+                border: 2px solid $primary-color;
+                transform: scale(95%);
+                transition: all 0.4s;
+            }
         }
     }
 }
@@ -326,7 +332,7 @@
                 }
                 .input:focus{
                     outline: none;
-                    border-bottom: 3px solid $primary-color;
+                    border-bottom: 2px solid $primary-color;
                     transition: all 0.4s;
                 }
                 textarea{
@@ -336,7 +342,7 @@
                 }
                 textarea:focus{
                     outline: none;
-                    border-bottom: 3px solid $primary-color;
+                    border-bottom: 2px solid $primary-color;
                     transition: all 0.4s;
                 }
             }

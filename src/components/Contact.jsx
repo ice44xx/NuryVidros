@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import InputMask from 'react-input-mask';
+import Swal from 'sweetalert2';
 
 const Contact = () => {
 
@@ -27,13 +28,23 @@ const Contact = () => {
         });
   
         if (response.status === 200) {
-          alert('Entraremos em contato assim que possível, obrigado!')
+          Swal.fire({
+            title: 'Mensagem enviada com sucesso!',
+            text: 'Obrigado, entraremos em contato o mais breve possível.',
+            icon: 'success',
+            confirmButtonText: 'Okay'
+          })
           setName('');
           setCity('');
           setPhone('');
           setMessage('');
         } else {
-          setStatus('error');
+          Swal.fire({
+            title: 'Opss, algo deu errado',
+            text: 'Algo deu errado, tente novamente ou entre em contato mais tarde.',
+            icon: 'error',
+            confirmButtonText: 'Cool'
+          })
         }
       } catch (error) {
         console.error(error);
