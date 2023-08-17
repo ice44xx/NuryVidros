@@ -3,17 +3,17 @@
 @import './index.scss';
 @import './mediaquery.scss';
 
-body{
-    background-color: $background-color;
+body {
+  background-color: $background-color;
 }
-::selection{
-    background-color: $primary-color;
-    color: white;
+::selection {
+  background-color: $primary-color;
+  color: white;
 }
-::-webkit-scrollbar{
-    width: 5px;
+::-webkit-scrollbar {
+  width: 5px;
 }
-::-webkit-scrollbar-thumb{
-    background-color: $primary-color;
-    border-radius: 10px;
+::-webkit-scrollbar-thumb {
+  background-color: $primary-color;
+  border-radius: 10px;
 }
